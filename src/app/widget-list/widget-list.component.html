@@ -1,0 +1,16 @@
+<p>
+  widget-list works!
+</p>
+
+<app-login></app-login>
+
+<table border="1">
+  <tr><th>ID</th><th>Name</th><th>Desc</th><th>user</th><th>owner</th></tr>
+  <tr *ngFor="let widget of widgets | async">
+    <td>{{ widget.id }}</td>
+    <td>{{ widget.name }}</td>
+    <td>{{ widget.description }}</td>
+    <td>{{ widget.kind }}</td>
+    <td>{{ widget.owner }}</td>
+  </tr>
+</table>
